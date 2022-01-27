@@ -32,6 +32,9 @@ You can find more examples of usage in the unit tests in `src` directory.
 - Set _Solution Platform_ in Visual Studio to _x64_.  
 Now you should be able to build and run the project.
 
+## Tools
+- CppCheck - A tool for static C/C++ code analysis.
+
 ## LICENSE
 BSD 4-clause License
 
