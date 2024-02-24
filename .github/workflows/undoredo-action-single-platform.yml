@@ -33,7 +33,7 @@ jobs:
       run: | 
         pwd
         ls
-        ${{ github.workspace }}/run_build.sh
+        ${GITHUB_WORKSPACE}/run_build.sh
 
     - name: Run test
       shell: bash
