@@ -24,14 +24,11 @@ You can find more examples of usage in the unit tests in `src` directory.
 - Add max undo operations limiter. 
 
 ## Build project
-- Have Visual Studio 2022 to open the project in `vs2022` directory.
-- Install [vcpkg](https://github.com/Microsoft/vcpkg) to add _gtest_ package. Run the following commands:
-````sh
-    vcpkg install gtest:x64-windows
-    vcpkg integrate install
-````
-- Set _Solution Platform_ in Visual Studio to _x64_.  
-Now you should be able to build and run the project.
+### Linux
+- Install **gcc >= 11.0**, **Cmake >= 3.22**, **pip (Python >= 3.10)**, **Conan >= 2.0**
+### Windows
+- Have Visual Studio 2022
+- Install **Cmake >= 3.22**, **pip (Python >= 3.10)**, **Conan >= 2.0**
 
 ## Tools
 - CppCheck - A tool for static C/C++ code analysis.
