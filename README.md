@@ -27,6 +27,8 @@ You can find more examples of usage in the unit tests in `tests` directory.
   &nbsp;&nbsp; **Cmake** >= 3.22 <br>
   &nbsp;&nbsp; **pip** (Python >= 3.10) <br>
   &nbsp;&nbsp; **Conan** >= 2.0
+- For Ubuntu: <br>
+ &nbsp;&nbsp; `apt install -y build-essential cmake make ninja-build pip`
 ### Windows
 - Have Visual Studio 2022
 - Install <br>
