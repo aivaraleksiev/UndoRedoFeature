@@ -1,6 +1,5 @@
 # UndoRedoFeature
 
-[![license](https://img.shields.io/badge/License-BSD%204--clause-blue)](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/LICENSE)
 [[Linux GCC Build CI](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/.github/workflows/Linux-action.yml)
 
 ## Summary
@@ -53,4 +52,5 @@ For **Ubuntu** run from terminal <br>
 
 ## LICENSE
 BSD 4-clause License
+[![license](https://img.shields.io/badge/License-BSD%204--clause-blue)](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/LICENSE)
 
