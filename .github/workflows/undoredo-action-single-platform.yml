@@ -33,7 +33,7 @@ jobs:
       run: |
         ls -la ${{github.workspace}}
         ls -la $GITHUB_WORKSPACE
-        ${GITHUB_WORKSPACE}/run_build.sh
+        ${{github.workspace}}}/run_build.sh
 
     - name: Run test
       shell: bash
