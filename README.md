@@ -26,8 +26,8 @@ You can find more examples of usage in the unit tests in `tests` directory.
   &nbsp;&nbsp; **gcc** >= 11.0 <br>
   &nbsp;&nbsp; **Cmake** >= 3.22 <br>
   &nbsp;&nbsp; **pip** (Python >= 3.10) <br>
-  &nbsp;&nbsp; **Conan** >= 2.0
-- For Ubuntu run from terminal <br>
+  &nbsp;&nbsp; **Conan** >= 2.0 <br> <br>
+For **Ubuntu** run from terminal <br>
  &nbsp;&nbsp; `apt install -y build-essential cmake make ninja-build pip` <br>
  &nbsp;&nbsp; `pip install conan` <br>
  &nbsp;&nbsp; `conan profile detect --force` <br>
