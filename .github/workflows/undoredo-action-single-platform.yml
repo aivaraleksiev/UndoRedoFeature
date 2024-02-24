@@ -18,15 +18,15 @@ jobs:
     - name: Checkout source code
       uses: actions/checkout@v4    
 
-#    - name: Install Conan to fetch package dependencies
-#      id: conan
-#      uses: turtlebrowser/get-conan@main
+    - name: Install Conan to fetch package dependencies
+      id: conan
+      uses: turtlebrowser/get-conan@main
 
-#    - name: Conan version
-#      run: echo "${{ steps.conan.outputs.version }}"
+    - name: Conan version
+      run: echo "${{ steps.conan.outputs.version }}"
 
-#    - name: Create default Conan profile
-#      run: conan profile detect --force
+    - name: Create default Conan profile
+      run: conan profile detect --force
 
     - name: Run build script
       shell: bash
