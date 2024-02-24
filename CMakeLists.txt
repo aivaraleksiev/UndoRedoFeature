@@ -42,7 +42,7 @@ SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output")
 
 include(CTest) # Do I need this actually. Do I need 'make test'
 
-add_subdirectory(source) 
+add_subdirectory(src) 
 add_subdirectory(tests)
 
 
