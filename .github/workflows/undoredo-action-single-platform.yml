@@ -31,9 +31,7 @@ jobs:
     - name: Run build script
       shell: bash
       run: | 
-        pwd
-        ls ${{ github.workspace }}
-        ${{ github.workspace }}/run_build.sh
+        ./run_build.sh
 
     - name: Run test
       shell: bash
