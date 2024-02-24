@@ -35,7 +35,8 @@ jobs:
 
     - name: Ubuntu Conan install dependencies and build project from script.
       shell: bash
-      run: ${{ github.workspace }}/run_build.sh
+      run: | 
+         ${{ github.workspace }}/run_build.sh
 
     - name: Run test
       shell: bash
