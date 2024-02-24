@@ -25,7 +25,7 @@ You can find more examples of usage in the unit tests in `src` directory.
 
 ## Build project
 ### Linux
-- Install 
+- Install Cmake >= 3.22
 ### Windows
 
 - Have Visual Studio 2022 to open the project in `vs2022` directory.
