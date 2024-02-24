@@ -2,6 +2,7 @@
 // Author: Ayvar Aleksiev
 
 #include "UndoRedoCommandManager.h"
+#include <memory>
 
 namespace Base {
 
