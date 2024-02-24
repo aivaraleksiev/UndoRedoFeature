@@ -19,7 +19,7 @@ SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output")
 SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output")
 
 
-include(CTest) # Do I need this actually. Do I need 'make test'
+include(CTest)
 
 add_subdirectory(source) 
 add_subdirectory(tests)
