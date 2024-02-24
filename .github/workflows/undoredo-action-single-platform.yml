@@ -30,9 +30,8 @@ jobs:
 
     - name: Run build script
       shell: bash
-      run: | 
-        find /home -type f -name run_build.sh 2> /dev/null    
-        bash ${{ github.workspace }}/run_build.sh
+      run: |    
+        ./${{ github.workspace }}/run_build.sh
 
     - name: Run test
       shell: bash
