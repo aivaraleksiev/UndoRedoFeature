@@ -15,14 +15,14 @@ jobs:
 
     steps:
     
-    - name: Install Conan to fetch package dependencies
-      id: conan
+#    - name: Install Conan to fetch package dependencies
+#      id: conan
 #      uses: turtlebrowser/get-conan@main
 
-    - name: Conan version
+#    - name: Conan version
 #      run: echo "${{ steps.conan.outputs.version }}"
 
-    - name: Create default Conan profile
+#    - name: Create default Conan profile
 #      run: conan profile detect --force
 
     - name: Run build script
