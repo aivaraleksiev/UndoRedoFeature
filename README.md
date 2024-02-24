@@ -32,6 +32,8 @@ You can find more examples of usage in the unit tests in `tests` directory.
  &nbsp;&nbsp; `pip install conan` <br>
  &nbsp;&nbsp; `conan profile detect --force` <br>
  &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
+- Build and Run project
+ &nbsp; From source folder execute **run_build.sh** script. 
 
 ### Windows
 - Have Visual Studio 2022
@@ -40,8 +42,10 @@ You can find more examples of usage in the unit tests in `tests` directory.
   &nbsp;&nbsp; **Conan** >= 2.0 <br>
   &nbsp;&nbsp; **pip** (Python >= 3.10)
 - Run from terminal <br>
-&nbsp;&nbsp; `conan profile detect --force` <br>
-&nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
+ &nbsp;&nbsp; `conan profile detect --force` <br>
+ &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
+- Build and Run project
+ &nbsp; From source folder execute **run_build.cmd** script. 
   
 ## Tools
 - CppCheck - A tool for static C/C++ code analysis.
