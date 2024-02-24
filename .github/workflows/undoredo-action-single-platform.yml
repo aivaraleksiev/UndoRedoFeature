@@ -14,25 +14,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    #- name: Checkout source code
-    #- uses: actions/checkout@v4
-      
     
     - name: Install Conan to fetch package dependencies
       id: conan
-      uses: turtlebrowser/get-conan@main
+#      uses: turtlebrowser/get-conan@main
 
     - name: Conan version
-      run: echo "${{ steps.conan.outputs.version }}"
+#      run: echo "${{ steps.conan.outputs.version }}"
 
     - name: Create default Conan profile
-      run: conan profile detect --force
+#      run: conan profile detect --force
 
     - name: Run build script
       shell: bash
       working-directory: ${{ github.workspace }}
       run: |
-        ls -la
+        CMD_RES=`ls -la ${{ github.workspace }}`
+        echo ${CMD_RES}
         ./run_build.sh
 
     - name: Run test
