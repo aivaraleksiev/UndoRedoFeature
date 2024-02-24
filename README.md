@@ -37,8 +37,8 @@ You can find more examples of usage in the unit tests in `tests` directory.
 - Have Visual Studio 2022
 - Install <br>
   &nbsp;&nbsp; **Cmake** >= 3.22 <br>
-  &nbsp;&nbsp; **pip** (Python >= 3.10) <br>
-  &nbsp;&nbsp; **Conan** >= 2.0
+  &nbsp;&nbsp; **Conan** >= 2.0 <br>
+  &nbsp;&nbsp; **pip** (Python >= 3.10)
 
 ## Tools
 - CppCheck - A tool for static C/C++ code analysis.
