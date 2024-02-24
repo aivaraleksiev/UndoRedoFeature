@@ -7,7 +7,7 @@ conan install . -s build_type=Debug -s compiler.cppstd=23 --output-folder=build-
 pushd .\build-x64\
 
 @REM Configure Visual Studio project
-cmake -S .. -B . -G "Visual Studio 17 2022" -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_BUILD_TYPE=Debug
+cmake -S .. -B . -G "Visual Studio 17 2022" -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_BUILD_TYPE=Release
 
 popd
 
