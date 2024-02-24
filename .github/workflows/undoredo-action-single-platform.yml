@@ -31,7 +31,6 @@ jobs:
     - name: Run build script
       shell: bash
       run: |
-        chmod a+x $GITHUB_WORKSPACE/run_build.sh
         $GITHUB_WORKSPACE/run_build.sh
 
     - name: Run test
