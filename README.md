@@ -26,6 +26,8 @@ You can find more examples of usage in the unit tests in `src` directory.
 ## Build project
 ### Linux
 
+### Windows
+
 - Have Visual Studio 2022 to open the project in `vs2022` directory.
 - Install [vcpkg](https://github.com/Microsoft/vcpkg) to add _gtest_ package. Run the following commands:
 ````sh
