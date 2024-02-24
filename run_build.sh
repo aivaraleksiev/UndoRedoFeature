@@ -11,7 +11,7 @@ conan install . -s build_type=Debug -s compiler.cppstd=gnu23 --output-folder=bui
 
 pushd ./build-x64
 
-cmake -S .. -B . -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_CXX_FLAGS="-m64" -D CMAKE_BUILD_TYPE=Debug
+cmake -S .. -B . -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_CXX_FLAGS="-m64" -D CMAKE_BUILD_TYPE=Release
 echo "---Start compilation---"
 make
 # BUILD_FOLDER$ make test
