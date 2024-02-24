@@ -25,10 +25,17 @@ You can find more examples of usage in the unit tests in `src` directory.
 
 ## Build project
 ### Linux
-- Install **gcc >= 11.0**, **Cmake >= 3.22**, **pip (Python >= 3.10)**, **Conan >= 2.0**
+- Install <br>
+  &nbsp;&nbsp; **gcc** >= 11.0 <br>
+  &nbsp;&nbsp; **Cmake** >= 3.22 <br>
+  &nbsp;&nbsp; **pip** (Python >= 3.10) <br>
+  &nbsp;&nbsp; **Conan** >= 2.0
 ### Windows
 - Have Visual Studio 2022
-- Install **Cmake >= 3.22**, **pip (Python >= 3.10)**, **Conan >= 2.0**
+- Install <br>
+  &nbsp;&nbsp; **Cmake** >= 3.22 <br>
+  &nbsp;&nbsp; **pip** (Python >= 3.10) <br>
+  &nbsp;&nbsp; **Conan** >= 2.0
 
 ## Tools
 - CppCheck - A tool for static C/C++ code analysis.
