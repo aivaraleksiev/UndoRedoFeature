@@ -14,20 +14,6 @@ if (NOT DEFINED CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 23)
 endif()
 
-#IF LINIX> ON WINDOWS NOT SURE IF IT WORKS THAT WAY.
-# On Windos you should add cppcheck to Path, but it won't work since it has to be started from Visusal Studio.
-if(CPPCHECK EQUAL 1)
-   find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
-   if (CMAKE_CXX_CPPCHECK)
-      message(VERBOSE "Cppcheck program found.")
-      list(
-          APPEND CMAKE_CXX_CPPCHECK "--enable=warning")
-   else()
-      message(WARNING "Cppcheck program not found.")
-      set(CMAKE_CXX_CPPCHECK "")
-   endif()
-endif()
-
 message(STATUS "CMAKE_BINARY_DIR: ${CMAKE_BINARY_DIR}")
 message(STATUS "CMAKE_RUNTIME_OUTPUT_DIRECTORY: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 message(STATUS "CMAKE_LIBRARY_OUTPUT_DIRECTORY: ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}")
