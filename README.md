@@ -32,7 +32,7 @@ For **Ubuntu** run from terminal <br>
  &nbsp;&nbsp; `pip install conan` <br>
  &nbsp;&nbsp; `conan profile detect --force` <br>
  &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
-- Build and Run project
+- **<ins>Build and Run project</ins>** <br>
  &nbsp; From source folder execute **run_build.sh** script. 
 
 ### Windows
@@ -44,7 +44,7 @@ For **Ubuntu** run from terminal <br>
 - Run from terminal <br>
  &nbsp;&nbsp; `conan profile detect --force` <br>
  &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
-- Build and Run project
+- **<ins>Build and Run project</ins>** <br>
  &nbsp; From source folder execute **run_build.cmd** script. 
   
 ## Tools
