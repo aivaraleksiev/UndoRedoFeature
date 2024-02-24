@@ -20,9 +20,6 @@ These classes are the foundations of the undo/redo functionality.
 This is a high level class that typically a developer would define in order to use the undo/redo functionality.
 You can find more examples of usage in the unit tests in `src` directory.
 
-## Todo
-- Add max undo operations limiter. 
-
 ## Build project
 ### Linux
 - Install <br>
