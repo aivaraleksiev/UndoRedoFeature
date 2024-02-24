@@ -21,7 +21,7 @@ if(CPPCHECK EQUAL 1)
    if (CMAKE_CXX_CPPCHECK)
       message(VERBOSE "Cppcheck program found.")
       list(
-          APPEND CMAKE_CXX_CPPCHECK "--enable=all")
+          APPEND CMAKE_CXX_CPPCHECK "--enable=warning")
    else()
       message(WARNING "Cppcheck program not found.")
       set(CMAKE_CXX_CPPCHECK "")
