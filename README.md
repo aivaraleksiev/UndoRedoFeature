@@ -39,7 +39,7 @@ You can find more examples of usage in the unit tests in `tests` directory.
   &nbsp;&nbsp; **Cmake** >= 3.22 <br>
   &nbsp;&nbsp; **Conan** >= 2.0 <br>
   &nbsp;&nbsp; **pip** (Python >= 3.10)
-- Run from terminal
+- Run from terminal <br>
 &nbsp;&nbsp; `conan profile detect --force` <br>
 &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
   
