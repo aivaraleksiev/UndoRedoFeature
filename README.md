@@ -31,7 +31,7 @@ You can find more examples of usage in the unit tests in `tests` directory.
  &nbsp;&nbsp; `apt install -y build-essential cmake make ninja-build pip` <br>
  &nbsp;&nbsp; `pip install conan` <br>
  &nbsp;&nbsp; `conan profile detect --force` <br>
- &nbsp;&nbsp; `conan profile path default` -> Edit *cppstd* option to **compiler.cppstd=gnu23**
+ &nbsp;&nbsp; `conan profile path default` -> Edit *cppstd* option to **compiler.cppstd=gnu23**, **build_type=Release**
 
 ### Windows
 - Have Visual Studio 2022
