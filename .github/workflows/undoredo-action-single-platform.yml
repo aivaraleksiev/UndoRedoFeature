@@ -29,7 +29,8 @@ jobs:
       shell: bash
       run: |
         ls -la ${{github.workspace}}
-        ./run_build.sh
+        ls -la ${GITHUB_WORKSPACE}
+        ${GITHUB_WORKSPACE}/run_build.sh
 
     - name: Run test
       shell: bash
