@@ -1,6 +1,6 @@
 # UndoRedoFeature
 
-[Linux GCC Build CI](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/.github/workflows/Linux-action.yml)
+[Linux GCC Build CI](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/.github/workflows/Linux-action.yml) <br>
 ![CI GCC](https://github.com/aivaraleksiev/UndoRedoFeature/main/.github/workflows/Linux-action.yml/badge.svg)
 
 ## Summary
