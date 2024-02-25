@@ -31,7 +31,7 @@ jobs:
     - name: Run build script
       shell: bash
       run: |
-        $GITHUB_WORKSPACE/run_build.sh
+        $GITHUB_WORKSPACE/run_build.shh
 
     - name: Run test
       shell: bash
