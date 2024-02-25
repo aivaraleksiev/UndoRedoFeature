@@ -1,5 +1,4 @@
-name: CMake on a single platform
-
+name: Linux GCC build
 on:
   push:
     branches: [ "main" ]
