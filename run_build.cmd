@@ -10,5 +10,7 @@ pushd .\build-x64\
 cmake -S .. -B . -G "Visual Studio 17 2022" -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_BUILD_TYPE=Release
 
 popd
+REM Start Compilation
+cmake --build ./build-x64 --config Release
 
 msg * /server:localhost "Look for undo-redo.sln in build folder. Make undo-redo-test as a Startup Project. Build and Run!"
