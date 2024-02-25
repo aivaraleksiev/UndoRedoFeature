@@ -1,9 +1,7 @@
 # UndoRedoFeature
 
-[Linux GCC Build CI](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/.github/workflows/Linux-action.yml) <br>
-![CI GCC](https://github.com/aivaraleksiev/UndoRedoFeature/main/.github/workflows/Linux-action.yml/badge.svg) <br>
-
 ![GCC build](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Linux-action.yml/badge.svg)
+
 ## Summary
 This implementation enables undo/redo functionality in your application. The idea of this project is to add undo/redo functionality to your objects with minimum additional implementation logic in your classes.
 
