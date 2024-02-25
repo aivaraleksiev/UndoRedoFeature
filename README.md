@@ -51,6 +51,6 @@ For **Ubuntu** run from terminal <br>
 - CppCheck - A tool for static C/C++ code analysis.
 
 ## LICENSE
-BSD 4-clause License
+[//]: <> (Comment: BSD 4-clause License.)
 [![license](https://img.shields.io/badge/License-BSD%204--clause-blue)](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/LICENSE)
 
