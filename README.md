@@ -54,3 +54,7 @@ For **Ubuntu** run from terminal <br>
 [//]: <> (Comment: BSD 4-clause License.)
 [![license](https://img.shields.io/badge/License-BSD%204--clause-blue)](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/LICENSE)
 
+## ToDo
+- Execute conan install from cmake. <br>
+  Remove **run_build.sh**, **run_build.cmd** scripts. 
+
