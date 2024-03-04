@@ -14,7 +14,7 @@ pushd ./build-x64
 cmake -S .. -B . -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_BUILD_TYPE=Release
 echo "---Start compilation---"
 make
-# BUILD_FOLDER$ make test
+# make test
 # BUILD_FOLDER$ ./output/undo-redo-test
 
 
