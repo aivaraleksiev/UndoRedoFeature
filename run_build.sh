@@ -25,4 +25,8 @@ make
 # ninja
 # ninja test
 
+# Another option for compilation
+# cmake --build ./build-x64 --config Release
+# ctest -C Release
+
 popd 
