@@ -1,5 +1,4 @@
 name: Windows MSVC build
-
 on:
   push:
     branches: [ "main" ]
