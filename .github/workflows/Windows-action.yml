@@ -1,0 +1,41 @@
+name: Windows MSVC build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+
+jobs:
+  build_and_run_tests:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout source code
+    - uses: actions/checkout@v3
+    
+    - name: Install Conan to fetch package dependencies
+      id: conan
+      uses: turtlebrowser/get-conan@main
+
+    - name: Conan version
+      run: echo "${{ steps.conan.outputs.version }}"
+
+    - name: Create default Conan profile
+      run: conan profile new default --detect
+
+    - name: Run build script
+      shell: pwsh 
+      run: | 
+        ${{ github.workspace }}/run_build.cmd
+
+    - name: Run test
+      shell: pwsh 
+      run: |
+       cd ${{ github.workspace }}/build-x64
+       ctest -C Release
+
