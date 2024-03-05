@@ -13,4 +13,7 @@ popd
 REM Start Compilation
 cmake --build ./build-x64 --config Release
 
+# Run tests
+# ctest -C Release
+
 msg * /server:localhost "Look for undo-redo.sln in build folder. Make undo-redo-test as a Startup Project. Build and Run!"
