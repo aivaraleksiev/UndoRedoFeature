@@ -27,14 +27,19 @@ jobs:
     - name: Create default Conan profile
       run: conan profile detect --force
 
-    - name: Build project
+    - name: Conan install
+      run: conan install . -s build_type=Release -s compiler.cppstd=gnu23 --output-folder=build-x64/conan --build=missing
+    
+    - name: Configure CMake
       shell: bash
       run: |
-        # Similar to running: $GITHUB_WORKSPACE/run_build.sh
-        conan install . -s build_type=Release -s compiler.cppstd=gnu23 --output-folder=build-x64/conan --build=missing
-        cd $GITHUB_WORKSPACE/build-x64
-        cmake -S .. -B . -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_BUILD_TYPE=Release
-        cmake --build . --config Release
+       cd $GITHUB_WORKSPACE/build-x64
+       cmake -S .. -B . -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_BUILD_TYPE=Release
+
+    - name: Build
+      shell: bash
+      run: cmake --build . --config Release
+      # Similar to running: $GITHUB_WORKSPACE/run_build.sh
 
     - name: Run test
       shell: bash
