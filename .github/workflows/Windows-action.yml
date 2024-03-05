@@ -32,13 +32,13 @@ jobs:
       run: |
         # Similar to running: $GITHUB_WORKSPACE/run_build.sh
         conan install . -s build_type=Release -s compiler.cppstd=gnu23 --output-folder=build-x64/conan --build=missing
-        cd $GITHUB_WORKSPACE/build-x64
+        cd $env:GITHUB_WORKSPACE/build-x64
         cmake -S .. -B . -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_BUILD_TYPE=Release
         cmake --build . --config Release
 
     - name: Run test
       shell: pwsh
       run: |
-       cd $GITHUB_WORKSPACE/build-x64
+       cd $env:GITHUB_WORKSPACE/build-x64
        ctest -C Release
 
