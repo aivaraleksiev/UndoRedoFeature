@@ -1,4 +1,4 @@
-# CI
+# Continuous Integration
 
 ### Linux-action.yml
 Build project under latest Ubuntu-x64 and run tests.
