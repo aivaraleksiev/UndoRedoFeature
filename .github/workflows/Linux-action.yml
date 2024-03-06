@@ -48,13 +48,19 @@ jobs:
        cd $GITHUB_WORKSPACE/build-x64
        ctest -C Release
 
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v4.0.1
+    - name: Publish to codecov
+      uses: codecov/codecov-action@v2
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        version: "v0.1.15"
-        slug: aivaraleksiev/UndoRedoFeature
+        flags: ${{ runner.os }}
+        name: ${{ runner.os }}-coverage
+        files: ./build/coverage.xml
 
+   # - name: Upload coverage reports to Codecov
+ #     uses: codecov/codecov-action@v4.0.1
+ #     with:
+ #       token: ${{ secrets.CODECOV_TOKEN }}
+ #       version: "v0.1.15"
+ #       slug: aivaraleksiev/UndoRedoFeature
 
 
 
