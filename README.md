@@ -3,6 +3,10 @@
 [![GCC build](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Linux-action.yml/badge.svg)](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Linux-action.yml)
 [![MSVC build](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Windows-action.yml/badge.svg)](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Windows-action.yml)
 [![CodeQL Analysis](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/CodeQL-Analysis-action.yml/badge.svg)](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/CodeQL-Analysis-action.yml)
+
+[//]: <> (Comment: BSD 4-clause License.)
+[![license](https://img.shields.io/badge/License-BSD%204--clause-blue)](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/LICENSE)
+
 ## Summary
 This implementation enables undo/redo functionality in your application. The idea of this project is to add undo/redo functionality to your objects with minimum additional implementation logic in your classes.
 
@@ -50,10 +54,6 @@ For **Ubuntu** run from terminal <br>
   
 ## Tools
 - CppCheck - A tool for static C/C++ code analysis.
-
-## LICENSE
-[//]: <> (Comment: BSD 4-clause License.)
-[![license](https://img.shields.io/badge/License-BSD%204--clause-blue)](https://github.com/aivaraleksiev/UndoRedoFeature/blob/main/LICENSE)
 
 ## ToDo
 - Execute conan install from cmake. <br>
