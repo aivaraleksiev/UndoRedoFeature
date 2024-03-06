@@ -57,5 +57,9 @@ For **Ubuntu** run from terminal <br>
 
 ## ToDo
 - Execute conan install from cmake. <br>
-  Remove **run_build.sh**, **run_build.cmd** scripts. 
+  Remove **run_build.sh**, **run_build.cmd** scripts.
+- Add coverage report for gcc build with codecov <br>
+  For reference: <br>
+  https://github.com/cpp-best-practices/cmake_template <br>
+  https://www.youtube.com/watch?v=FOcCFGkkQ9c
 
