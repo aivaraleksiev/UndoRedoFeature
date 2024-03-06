@@ -52,6 +52,7 @@ jobs:
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        version: "v0.1.15"
         slug: aivaraleksiev/UndoRedoFeature
 
 
