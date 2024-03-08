@@ -35,6 +35,7 @@ You can find more examples of usage in the unit tests in `tests` directory.
 For **Ubuntu** run from terminal <br>
  &nbsp;&nbsp; `apt install -y build-essential cmake make ninja-build pip` <br>
  &nbsp;&nbsp; `pip install conan` <br>
+ &nbsp;&nbsp; source ~/.profile <br>
  &nbsp;&nbsp; `conan profile detect --force` <br>
  &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
 - **<ins>Build and Run project</ins>** <br>
