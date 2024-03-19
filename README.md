@@ -42,7 +42,7 @@ For **Ubuntu** run from terminal <br>
   &nbsp;
   **CMake configure**
   ```
-    cmake -S . -B ./build -D -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=./conan_provider.cmake -D CMAKE_BUILD_TYPE=Release. 
+    cmake -S . -B ./build -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=./conan_provider.cmake -D CMAKE_BUILD_TYPE=Release 
   ```
   &nbsp;
   **Cmake build**
