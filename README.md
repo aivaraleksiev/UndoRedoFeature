@@ -39,7 +39,21 @@ For **Ubuntu** run from terminal <br>
  &nbsp;&nbsp; `conan profile detect --force` <br>
  &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
 - **<ins>Build and Run project</ins>** <br>
- &nbsp; From source folder execute **run_build.sh** script. 
+  &nbsp;
+  **CMake configure**
+  ```
+    cmake -S . -B ./build -D -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=./conan_provider.cmake -D CMAKE_BUILD_TYPE=Release. 
+  ```
+  &nbsp;
+  **Cmake build**
+  ```
+    cmake --build ./build/ --config Release
+  ```
+  &nbsp;
+  **Run**
+  ```
+    ./build/output/undo-redo-test
+  ```
 
 ### Windows
 - Have Visual Studio 2022
