@@ -18,7 +18,12 @@ endif()
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output")
 SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output")
 
-include(CTest)
 
 add_subdirectory(source) 
-add_subdirectory(tests)
+
+include(CTest)
+
+if (BUILD_TESTING)
+  enable_testing()
+  add_subdirectory(tests)
+endif()
