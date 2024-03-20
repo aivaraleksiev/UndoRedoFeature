@@ -51,8 +51,12 @@ For **Ubuntu** run from terminal <br>
  &nbsp;&nbsp; `conan profile detect --force` <br>
  &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
 - **<ins>Build and Run project</ins>** <br>
- &nbsp; From source folder execute **run_build.cmd** script. 
-  
+ &nbsp; From root folder execute the following. 
+  ```
+    cmake -S . -B ./build/ -D CMAKE_BUILD_TYPE=Release
+
+    cmake --build ./build/ --config=Release
+  ```
 ## Tools
 - CppCheck - A tool for static C/C++ code analysis.
 
