@@ -44,7 +44,7 @@ public:
    UndoRedoCommandManager(UndoRedoCommandManager const&) = delete;
    UndoRedoCommandManager& operator=(UndoRedoCommandManager const&) = delete;
 private:
-   UndoRedoCommandManager() = default;
+   UndoRedoCommandManager() = delete;
 
    // Add to redo list the last object that was affected by undo operation
    //
