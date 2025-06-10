@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Cache Conan Dependencies # Caches required packages, e.g. gtes
-      if: false  # Disables the step. It creates cache on storage too quickly.
+      if: false  # Disables this step. It creates cache on storage too quickly.
       uses: actions/cache@v4.2.3
       with:
         path: ~/.conan2/p
