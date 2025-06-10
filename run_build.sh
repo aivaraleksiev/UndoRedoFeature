@@ -6,8 +6,8 @@
 # From source folder run command to install dependent packages
 # Install both release and debug package version, so we can build in Debug/Release
 
-conan install . -s build_type=Release -s compiler.cppstd=gnu23 --output-folder=build-x64/conan --build=missing
-conan install . -s build_type=Debug -s compiler.cppstd=gnu23 --output-folder=build-x64/conan --build=missing
+conan install . -s build_type=Release -s compiler.cppstd=23 --output-folder=build-x64/conan --build=missing
+conan install . -s build_type=Debug -s compiler.cppstd=23 --output-folder=build-x64/conan --build=missing
 
 pushd ./build-x64
 
