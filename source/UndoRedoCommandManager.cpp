@@ -14,7 +14,8 @@ std::mutex UndoRedoCommandManager::_mutex;
 UndoRedoCommandManager*
 UndoRedoCommandManager::getInstance()
 {
-   static std::unique_ptr<Base::UndoRedoCommandManager> sManagerPtr(new UndoRedoCommandManager());
+   static std::unique_ptr<Base::UndoRedoCommandManager> sManagerPtr(
+      std::make_unique<UndoRedoCommandManager>());
    return sManagerPtr.get();
 }
 
