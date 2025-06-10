@@ -15,7 +15,16 @@ jobs:
     steps:
 
     - name: Checkout source code
-      uses: actions/checkout@v4    
+      uses: actions/checkout@v4
+
+    - name: Cache Conan Dependencies
+      # Caches required packages, e.g. gtest
+      uses: actions/cache@v4.2.3
+      with:
+        path: C:\Users\runneradmin\.conan2\p
+        key: conan-${{ runner.os }}-${{ hashFiles('conanfile.txt') }}
+        restore-keys: |
+          conan-${{ runner.os }}-
 
     - name: Install Conan to fetch package dependencies
       id: conan
