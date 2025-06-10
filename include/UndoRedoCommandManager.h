@@ -14,8 +14,6 @@ namespace Base
 class UNDO_REDO_API UndoRedoCommandManager
 {
 public:
-   UndoRedoCommandManager() = default;
-
    // Access to the singleton instance of this class.
    static UndoRedoCommandManager* getInstance();
 
@@ -46,6 +44,8 @@ public:
    UndoRedoCommandManager(UndoRedoCommandManager const&) = delete;
    UndoRedoCommandManager& operator=(UndoRedoCommandManager const&) = delete;
 private:
+   UndoRedoCommandManager() = default;
+
    // Add to redo list the last object that was affected by undo operation
    //
    // @param[in] instance The instace that have been last changed.
