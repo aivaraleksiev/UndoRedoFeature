@@ -19,6 +19,7 @@ jobs:
 
     - name: Cache Conan Dependencies
       # Caches required packages, e.g. gtest
+      if: false  # Disables this step. It creates cache on storage too quickly.
       uses: actions/cache@v4.2.3
       with:
         path: C:\Users\runneradmin\.conan2\p
