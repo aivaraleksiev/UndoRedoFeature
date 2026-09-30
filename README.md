@@ -1,7 +1,7 @@
 # UndoRedoFeature
 
-[![GCC build](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Linux-action.yml/badge.svg)](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Linux-action.yml)
-[![MSVC build](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Windows-action.yml/badge.svg)](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Windows-action.yml)
+[![Linux Clang build](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Linux-action.yml/badge.svg)](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Linux-action.yml)
+[![Windows Clang build](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Windows-action.yml/badge.svg)](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/Windows-action.yml)
 [![CodeQL Analysis](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/CodeQL-Analysis-action.yml/badge.svg)](https://github.com/aivaraleksiev/UndoRedoFeature/actions/workflows/CodeQL-Analysis-action.yml)
 
 [//]: <> (Comment: BSD 4-clause License.)
@@ -26,41 +26,21 @@ This is a high level class that typically a developer would define in order to u
 You can find more examples of usage in the unit tests in `tests` directory.
 
 ## Build project
-### Linux
-- Install <br>
-  &nbsp;&nbsp; **gcc** >= 11.0 <br>
-  &nbsp;&nbsp; **Cmake** >= 3.22 <br>
-  &nbsp;&nbsp; **pip** (Python >= 3.10) <br>
-  &nbsp;&nbsp; **Conan** >= 2.0 <br> <br>
-For **Ubuntu** run from terminal <br>
- &nbsp;&nbsp; `apt install -y build-essential cmake make ninja-build pip` <br>
- &nbsp;&nbsp; `pip install conan` <br>
- &nbsp;&nbsp; source ~/.profile <br>
- &nbsp;&nbsp; `conan profile detect --force` <br>
- &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
-- **<ins>Build and Run project</ins>** <br>
- &nbsp; From source folder execute **run_build.sh** script. 
 
-### Windows
-- Have Visual Studio 2022
-- Install <br>
-  &nbsp;&nbsp; **Cmake** >= 3.22 <br>
-  &nbsp;&nbsp; **Conan** >= 2.0 <br>
-  &nbsp;&nbsp; **pip** (Python >= 3.10)
-- Run from terminal <br>
- &nbsp;&nbsp; `conan profile detect --force` <br>
- &nbsp;&nbsp; `conan profile path default` - For reference to check where it is located.
-- **<ins>Build and Run project</ins>** <br>
- &nbsp; From source folder execute **run_build.cmd** script. 
-  
+Install:
+- **Xmake** 2.8.5 or newer
+- **Clang** compiler with C++23 support.
+- Make sure `clang++` and `xmake` are on your `PATH`.
+- On Windows, also install the Visual Studio C++ build tools and Windows SDK.
+
+From the repository root, run the same commands on Windows and Linux:
+
+```sh
+xmake
+xmake test
+xmake run undo-redo-test
+```
+
 ## Tools
 - CppCheck - A tool for static C/C++ code analysis.
-
-## ToDo
-- Execute conan install from cmake. <br>
-  Remove **run_build.sh**, **run_build.cmd** scripts.
-- Add coverage report for gcc build with codecov <br>
-  For reference: <br>
-  https://github.com/cpp-best-practices/cmake_template <br>
-  https://www.youtube.com/watch?v=FOcCFGkkQ9c
 

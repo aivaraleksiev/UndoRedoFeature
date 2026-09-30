@@ -1,61 +1,32 @@
-name: Linux GCC build
+name: Linux Clang build
+
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
-
-env:
-  BUILD_TYPE: Release
+    branches: ["main"]
 
 jobs:
-  Build_and_run_tests:
+  build_and_test:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
 
-    - name: Checkout source code
-      uses: actions/checkout@v4
+      - name: Set up Xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
 
-    - name: Cache Conan Dependencies # Caches required packages, e.g. gtes
-      if: false  # Disables this step. It creates cache on storage too quickly.
-      uses: actions/cache@v4.2.3
-      with:
-        path: ~/.conan2/p
-        key: conan-${{ runner.os }}-${{ hashFiles('conanfile.txt') }}
-        restore-keys: |
-          conan-${{ runner.os }}-
+      - name: Verify Clang
+        run: clang++ --version
 
-    - name: Install Conan to fetch package dependencies
-      id: conan
-      uses: turtlebrowser/get-conan@main
+      - name: Configure Xmake
+        run: xmake f -y
 
-    - name: Conan version
-      run: echo "${{ steps.conan.outputs.version }}"
+      - name: Build
+        run: xmake -y
 
-    - name: Create default Conan profile
-      run: conan profile detect --force
-
-    - name: Conan install
-      run: conan install . -s build_type=Release -s compiler.cppstd=23 --output-folder=build-x64/conan --build=missing
-    
-    - name: Configure CMake
-      shell: bash
-      run: |
-       cd $GITHUB_WORKSPACE/build-x64
-       cmake -S .. -B . -D CMAKE_TOOLCHAIN_FILE=./conan/conan_toolchain.cmake -D CMAKE_BUILD_TYPE=Release
-
-    - name: Build
-      shell: bash
-      run: |
-       # Similar to running: $GITHUB_WORKSPACE/run_build.sh
-       cmake --build ./build-x64 --config Release
-
-    - name: Run test
-      shell: bash
-      run: |
-       cd $GITHUB_WORKSPACE/build-x64
-       ctest -C Release
-
-
-
+      - name: Run tests
+        run: xmake test -y
