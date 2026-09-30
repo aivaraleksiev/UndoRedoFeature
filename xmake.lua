@@ -6,7 +6,11 @@ set_version("1.0.0")
 
 -- Compiler / language settings
 set_languages("c++23")
-set_toolchains("clang")
+if is_plat("windows") then
+    set_toolchains("clang-cl", {llvm = true})
+else
+    set_toolchains("clang")
+end
 set_warnings("all")
 
 -- Build modes
