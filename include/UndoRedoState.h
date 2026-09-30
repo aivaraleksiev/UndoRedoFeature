@@ -1,4 +1,4 @@
-// Copyright 2021
+// Copyright 2021 -2026
 // Author: Ayvar Aleksiev
 
 #pragma once
@@ -12,7 +12,7 @@
 namespace Base {
 
 template<typename Type>
-class UNDO_REDO_API UndoRedoState final : public UndoRedoInterface
+class UndoRedoState final : public UndoRedoInterface
 {
 public:
    // Constructor

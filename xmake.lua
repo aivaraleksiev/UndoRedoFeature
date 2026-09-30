@@ -1,4 +1,7 @@
-set_project("UndoRedo Feature")
+-- Copyright 2026
+-- Author: Ayvar Aleksiev
+
+set_project("undo-redo")
 set_version("1.0.0")
 
 -- Compiler / language settings
@@ -11,47 +14,26 @@ add_rules("mode.debug", "mode.release", "mode.releasedbg")
 set_defaultmode("releasedbg")
 
 -- External dependencies. Download/build GoogleTest automatically
-add_requires("gtest 1.17.0")
+add_requires("gtest 1.17.0", {configs = {main = true, gmock = false}})
 
-
-------------------------------------------------------------
 -- Static library
-------------------------------------------------------------
-
-target("core")
-
-    set_kind("static")
-
+target("undo-redo-lib")
+    set_kind("shared")
+    add_defines("UNDO_REDO_SHARED", {public = true})
+    add_defines("UNDO_REDO_BUILDING")
     -- Source files
-    add_files("src/core/*.cpp")
-
+    add_files("source/*.cpp")
+    add_headerfiles("include/*.h")
     -- Public headers
     add_includedirs("include", {public = true})
 
-    -- Example preprocessor definition
-    add_defines("MY_PROJECT_CORE")
 
-    -- External packages used by this target
-    --
-    -- add_packages("fmt")
-------------------------------------------------------------
-
-
--- Main executable
-target("unroredo_app")
-
+-- Test executable
+target("undo-redo-test")
     set_kind("binary")
-
-    -- Application sources
-    add_files("src/main.cpp")
-    add_files("src/app/*.cpp")
-
-    -- Header search path
+    add_files("tests/*.cpp")
     add_includedirs("include")
-
-    -- Link our internal library
-    add_deps("core")
-
-    -- External dependencies
-    add_packages("gtest")    
+    add_deps("undo-redo-lib")
+    add_packages("gtest")
+    add_tests("UndoRedoUnitTests")
 
